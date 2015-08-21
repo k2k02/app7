@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        script(src='/public/libs/angular.js')
+        script(src='/public/libs/angular-route.js')
+        script(src='/public/javascripts/sendJson.js')
+        
+    body
+        div(ng-app='app')
+            div(ng-controller='sendJsonController')
+                
+                textarea(id="inputFields" rows="4" cols="50")
+                br
+                input(ng-click="senddata" type="button" value="submit")
+                br
+                input(ng-model='status' type="text")
+        
+                block content
+       

@@ -1,0 +1,13 @@
+html
+    head
+        script(src='/public/libs/angular.js')
+        script(src='/public/libs/angular-route.js')
+        script(src='/public/javascripts/processJson.js')
+
+    body
+         div(ng-app='app')
+            div(ng-controller='MainController as main')
+                div(ng-repeat='post in main.posts')
+                    input(type='{{post.type}}' id='{{post.id}}' ng-model='post.value' placeholder='{{post.placeholder}}')
+
+                    block content
